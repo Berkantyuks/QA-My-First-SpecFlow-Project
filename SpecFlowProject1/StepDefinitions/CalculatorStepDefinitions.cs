@@ -1,9 +1,10 @@
+using TechTalk.SpecFlow.Assist;
+
 namespace SpecFlowProject1.StepDefinitions
 {
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
-        // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         [Given("the first number is (.*)")]
         public void GivenTheFirstNumberIs(int number)
@@ -23,10 +24,25 @@ namespace SpecFlowProject1.StepDefinitions
             Console.WriteLine($"{nameof(WhenTheTwoNumbersAreAdded)}");
         }
 
-        [Then("the result should be (.*)")]
-        public void ThenTheResultShouldBe(int result)
+        [Then(@"the result should ""([^""]*)""")]
+        public void ThenTheResultShould(string result)
         {
-            Console.WriteLine($"{nameof(WhenTheTwoNumbersAreAdded)} : {result}");
+            Console.WriteLine($"{nameof(ThenTheResultShould)} : {result}");
         }
+
+        [Given(@"Input following numbers for the calculator")]
+        public void GivenInputFollowingNumbersForTheCalculator(Table table)
+        {
+
+            dynamic datas = table.CreateDynamicSet();
+            foreach (var item in datas)
+            {
+                Console.WriteLine($"The Number is {item.Numbers}");
+            }
+            
+        }
+
+
     }
+
 }
