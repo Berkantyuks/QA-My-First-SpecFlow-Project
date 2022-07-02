@@ -8,31 +8,25 @@ namespace SpecFlowProject1.StepDefinitions
         [Given("the first number is (.*)")]
         public void GivenTheFirstNumberIs(int number)
         {
-            
+            Console.WriteLine($"{nameof(GivenTheFirstNumberIs)} : {number}");
         }
 
         [Given("the second number is (.*)")]
         public void GivenTheSecondNumberIs(int number)
         {
-            //TODO: implement arrange (precondition) logic
-
-            throw new PendingStepException();
+            Console.WriteLine($"{nameof(GivenTheSecondNumberIs)} : {number}");
         }
 
         [When("the two numbers are added")]
         public void WhenTheTwoNumbersAreAdded()
         {
-            //TODO: implement act (action) logic
-
-            throw new PendingStepException();
+            Console.WriteLine($"{nameof(WhenTheTwoNumbersAreAdded)}");
         }
 
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            //TODO: implement assert (verification) logic
-
-            throw new PendingStepException();
+            Console.WriteLine($"{nameof(WhenTheTwoNumbersAreAdded)} : {result}");
         }
     }
 }
