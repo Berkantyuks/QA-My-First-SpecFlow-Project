@@ -165,7 +165,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Result",
+                            "Details"});
+                table2.AddRow(new string[] {
+                            "120",
+                            "Plus"});
 #line 22
+ testRunner.Then("See result and details", ((string)(null)), table2, "Then ");
+#line hidden
+#line 25
  testRunner.Then("the result should \"PASS\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -19,4 +19,7 @@ Scenario: Working with tables
 		| 50      |
 		| 70      |
 	When the two numbers are added
+	Then See result and details
+		| Result | Details |
+		| 120    | Plus    |
 	Then the result should "PASS"

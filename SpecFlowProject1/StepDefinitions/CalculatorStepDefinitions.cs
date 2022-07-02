@@ -42,6 +42,14 @@ namespace SpecFlowProject1.StepDefinitions
             
         }
 
+        [Then(@"See result and details")]
+        public void ThenSeeResultAndDetails(Table table)
+        {
+            dynamic data = table.CreateDynamicInstance();
+            Console.WriteLine($"The Number is {data.Result} with details {data.Details}");
+        }
+
+
 
     }
 
